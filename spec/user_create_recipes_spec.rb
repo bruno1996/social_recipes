@@ -21,7 +21,7 @@ feature 'user_create_recipes ' do
   fill_in 'Quantas Pessoas Serve', with: recipe.how_many_people_serves
   fill_in 'Tempo de Preparação',   with: recipe.preparation_time
   fill_in 'Nivel de Dificuldade',  with: recipe.difficulty_level
-  fill_in 'ingredients',           with: recipe.ingredients
+  fill_in 'Ingredients',           with: recipe.ingredients
   fill_in 'Passo a Passo',         with: recipe.step_by_step
 
   click_on 'Postar Receita'
@@ -34,5 +34,15 @@ feature 'user_create_recipes ' do
   expect(page).to have_content recipe.difficulty_level
   expect(page).to have_content recipe.ingredients
   expect(page).to have_content recipe.step_by_step
+  end
+  scenario 'valid recipes' do
+
+    visit root_path
+
+    click_on 'Cadastrar Receita'
+
+    click_on 'Postar Receita'
+
+    expect(page).to have_content 'PREENCHA OS CAMPOS EM BRANCO'
   end
 end

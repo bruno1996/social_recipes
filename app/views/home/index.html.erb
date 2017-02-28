@@ -1,1 +1,12 @@
-<%= link_to 'Cadastrar Receita', @recipes %>
+<%= link_to 'Cadastrar Receita', new_recipe_path %>
+
+<% @recipes.each do |recipe| %>
+  <%= recipe.recipe_name %>
+  <%= recipe.kitchen %>
+  <%= recipe.type_of_food %>
+  <%= recipe.how_many_people_serves %>
+  <%= recipe.preparation_time %>
+  <%= recipe.difficulty_level %>
+  <%= recipe.ingredients %>
+  <%= recipe.step_by_step %>
+<% end %>
