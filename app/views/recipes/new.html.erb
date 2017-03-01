@@ -3,30 +3,33 @@
 <%= flash[:error] %>
 
 <%= form_for @recipe do |f| %>
+<dl>
+  <dt><%= f.label :recipe_name, 'Nome da Receita' %></dt>
+  <dd><%= f.text_field :recipe_name %></dd>
 
-<%= f.label :recipe_name, 'Nome da Receita' %>
-<%= f.text_field :recipe_name %>
+  <dt><%= f.label :kitchen, 'Cozinha' %></dt>
+  <dd><%= f.text_field :kitchen %></dd>
 
-<%= f.label :kitchen, 'Cozinha' %>
-<%= f.text_field :kitchen %>
+  <dt><%= f.label :type_of_food, 'Tipo de Comida' %></dt>
+  <dd><%= f.text_field :type_of_food %></dd>
 
-<%= f.label :type_of_food, 'Tipo de Comida' %>
-<%= f.text_field :type_of_food %>
+  <dt><%= f.label :how_many_people_serves, 'Quantas Pessoas Serve' %></dt>
+  <dd><%= f.text_field :how_many_people_serves %></dd>
 
-<%= f.label :how_many_people_serves, 'Quantas Pessoas Serve' %>
-<%= f.text_field :how_many_people_serves %>
+  <dt><%= f.label :preparation_time, 'Tempo de Preparação' %></dt>
+  <dd><%= f.text_field :preparation_time %></dd>
 
-<%= f.label :preparation_time, 'Tempo de Preparação' %>
-<%= f.text_field :preparation_time %>
+  <dt><%= f.label :difficulty_level, 'Nivel de Dificuldade'%></dt>
+  <dd><%= f.text_field :difficulty_level %></dd>
 
-<%= f.label :difficulty_level, 'Nivel de Dificuldade'%>
-<%= f.text_field :difficulty_level %>
+  <dt><%= f.label :ingredients, 'Ingredients' %></dt>
+  <dd><%= f.text_field :ingredients %></dd>
 
-<%= f.label :ingredients, 'Ingredients' %>
-<%= f.text_field :ingredients %>
-
-<%= f.label :step_by_step, 'Passo a Passo' %>
-<%= f.text_field :step_by_step %>
-
+  <dt><%= f.label :step_by_step, 'Passo a Passo' %></dt>
+  <dd><%= f.text_field :step_by_step %></dd>
+  <br>
 <%= f.submit 'Postar Receita' %>
+</dl>
 <% end %>
+
+<%= link_to 'Voltar', root_path %>
