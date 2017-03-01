@@ -26,7 +26,7 @@ feature 'user_create_recipes ' do
 
   click_on 'Postar Receita'
 
-  expect(page).to have_content recipe.recipe_name
+  expect(page).to have_css("h2", text: recipe.recipe_name)
   expect(page).to have_content recipe.kitchen
   expect(page).to have_content recipe.type_of_food
   expect(page).to have_content recipe.how_many_people_serves
@@ -44,5 +44,21 @@ feature 'user_create_recipes ' do
     click_on 'Postar Receita'
 
     expect(page).to have_content 'PREENCHA OS CAMPOS EM BRANCO'
+  end
+  scenario 'Click in link of receipt' do
+
+    visit root_path
+
+    click_on 'Nome da Receita'
+
+    expect(page).to have_css("h2", text: recipe.recipe_name)
+    expect(page).to have_content recipe.kitchen
+    expect(page).to have_content recipe.type_of_food
+    expect(page).to have_content recipe.how_many_people_serves
+    expect(page).to have_content recipe.preparation_time
+    expect(page).to have_content recipe.difficulty_level
+    expect(page).to have_content recipe.ingredients
+    expect(page).to have_content recipe.step_by_step
+
   end
 end
