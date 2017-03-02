@@ -1,9 +1,10 @@
 require 'rails_helper'
 
-feature 'user_create_recipes ' do
+feature 'user create recipes' do
   scenario 'successfully' do
-                recipe = Recipe.new(recipe_name:'Torta de Abacaxi',
-                                    kitchen:'Brasileira',
+                kitchen = Kitchen.create(name:'Japonesa')
+
+                recipe = Recipe.create(recipe_name:'Torta de Abacaxi',
                                     type_of_food:'Sobremesa',
                                     how_many_people_serves:'10 porçoẽs',
                                     preparation_time:'50 min',
@@ -16,7 +17,7 @@ feature 'user_create_recipes ' do
   click_on 'Cadastrar Receita'
 
   fill_in 'Nome da Receita',       with: recipe.recipe_name
-  fill_in 'Cozinha',               with: recipe.kitchen
+  select  kitchen.name,            from: 'Cozinha'
   fill_in 'Tipo de Comida',        with: recipe.type_of_food
   fill_in 'Quantas Pessoas Serve', with: recipe.how_many_people_serves
   fill_in 'Tempo de Preparação',   with: recipe.preparation_time
@@ -27,7 +28,7 @@ feature 'user_create_recipes ' do
   click_on 'Postar Receita'
 
   expect(page).to have_css("h2", text: recipe.recipe_name)
-  expect(page).to have_content recipe.kitchen
+  expect(page).to have_content kitchen.name
   expect(page).to have_content recipe.type_of_food
   expect(page).to have_content recipe.how_many_people_serves
   expect(page).to have_content recipe.preparation_time
@@ -46,5 +47,13 @@ feature 'user_create_recipes ' do
     click_on 'Postar Receita'
 
     expect(page).to have_content 'PREENCHA OS CAMPOS EM BRANCO'
+  end
+  scenario 'Test back new recipe' do
+
+    visit root_path
+
+    click_on 'Cadastrar Receita'
+
+    click_on 'Voltar'
   end
 end

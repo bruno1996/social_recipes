@@ -1,12 +1,14 @@
 <h1>Social Receipts</h1>
 
-<%= link_to 'Cadastrar Receita', new_recipe_path %> <br> <br>
+<%= link_to 'Cadastrar Receita', new_recipe_path %>
+<%= link_to 'Cadastrar Cozinha', new_kitchen_path %>
+
 <dl>
 <% @recipes.each do |recipe| %>
   <dt> Nome da Receita </dt>
   <dd><%= recipe.recipe_name %></dd>
   <dt> Cozinha </dt>
-  <dd><%= recipe.kitchen %></dd>
+  <dd><%= recipe.kitchen_id %></dd>
   <dt> Tipo de Comida </dt>
   <dd><%= recipe.type_of_food %></dd>
   <dt> Quantas Pessoas Serve </dt>
