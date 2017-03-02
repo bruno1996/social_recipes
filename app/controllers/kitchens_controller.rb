@@ -4,14 +4,21 @@ class KitchensController < ApplicationController
     @recipes = Recipe.all
   end
   def new
+    @kitchen = Kitchen.new
     @recipes = Recipe.all
-    @Kitchen = Kitchen.new
   end
   def create
+    @kitchen = Kitchen.new
     @recipes = Recipe.all
-    kitchen_params = params.require(:recipe).permit(:name)
-    @kitchen = Kitchen.new(kitchen_params)
-    @kitchen.save
-    redirect_to @kitchen
+    @kitchen.name = params[:kitchen][:name]
+    if @kitchen.save
+      redirect_to @kitchen
+    else
+      flash[:error] = 'PREENCHA O NOME DA COZINHA'
+      render :new
+    end
+  end
+  def show
+    @kitchen = Kitchen.find params[:id]
   end
 end

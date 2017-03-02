@@ -1,5 +1,14 @@
+<h2>Cadastrando Cozinha</h2>
+
+<%= flash[:error] %>
+<dl>
 <%= form_for @kitchen do |f| %>
 
+  <dt><%= f.label :name, 'Nome da Cozinha' %></dt>
+  <dd><%= f.text_field :name %></dd>
 
+  <%= f.submit 'Postar Cozinha' %>
 
 <% end %>
+</dl>
+<%= link_to 'Voltar', root_path %>

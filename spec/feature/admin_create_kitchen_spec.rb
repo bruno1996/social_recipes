@@ -26,4 +26,16 @@ require 'rails_helper'
     click_on 'Voltar'
 
     end
+    scenario 'validate kitchen' do
+
+      visit root_path
+
+      click_on 'Cadastrar Cozinha'
+
+      click_on 'Postar Cozinha'
+
+      expect(page).to have_content('PREENCHA O NOME DA COZINHA')
+
+      click_on 'Voltar'
+    end
   end
