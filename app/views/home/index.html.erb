@@ -1,7 +1,8 @@
 <h1>Social Receipts</h1>
 
 <%= link_to 'Cadastrar Receita', new_recipe_path %> <br>
-<%= link_to 'Cadastrar Cozinha', new_kitchen_path %>
+<%= link_to 'Cadastrar Cozinha', new_kitchen_path %> <br>
+<%= link_to 'Cadastrar Tipo de Comida', new_type_path %>
 
 <dl>
 <% @recipes.each do |recipe| %>
@@ -11,7 +12,7 @@
   <dt> Cozinha </dt>
   <dd><%= recipe.kitchen_id %></dd>
   <dt> Tipo de Comida </dt>
-  <dd><%= recipe.type_of_food %></dd>
+  <dd><%= recipe.type_id %></dd>
   <dt> Quantas Pessoas Serve </dt>
   <dd><%= recipe.how_many_people_serves %></dd>
   <dt> Tempo de Preparação </dt>

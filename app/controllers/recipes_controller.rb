@@ -2,15 +2,18 @@ class RecipesController < ApplicationController
   def index
     @recipes = Recipe.all
     @kitchens = Kitchen.all
+    @types = Type.all
   end
   def show
     @recipe = Recipe.find params[:id]
   end
   def new
+    @types = Type.all
     @kitchens = Kitchen.all
     @recipe = Recipe.new
   end
   def create
+    @types = Type.all
     @kitchens = Kitchen.all
     recipe_params = params.require(:recipe).permit(:recipe_name,:kitchen_id,:type_of_food,:how_many_people_serves,:preparation_time,:difficulty_level,:ingredients,:step_by_step,:avatar)
     @recipe = Recipe.new(recipe_params)

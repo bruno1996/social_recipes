@@ -1,0 +1,13 @@
+<h2>Cadastrar Tipo de Comida </h2>
+
+<%= flash[:error] %>
+<dl>
+<%= form_for @type do |f| %>
+
+  <dt><%= f.label :name, 'Tipo de Comida' %></dt>
+  <dd><%= f.text_field :name %></dd>
+
+  <%= f.submit 'Postar Tipo de Comida' %>
+<% end %>
+</dl>
+<%= link_to 'Voltar', root_path %>

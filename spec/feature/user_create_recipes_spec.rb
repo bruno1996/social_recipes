@@ -4,10 +4,9 @@ feature 'user create recipes' do
   scenario 'successfully' do
                 kitchen = Kitchen.create(name:'Japonesa')
 
-                type_of_food = Type_of_food.create(name:'Sobremesa')
+                type = Type.create(name:'Sobremesa')
 
                 recipe = Recipe.create(recipe_name:'Torta de Abacaxi',
-                                    type_of_food:'Sobremesa',
                                     how_many_people_serves:'10 porçoẽs',
                                     preparation_time:'50 min',
                                     difficulty_level:'medio',
@@ -20,7 +19,7 @@ feature 'user create recipes' do
 
       fill_in 'Nome da Receita',       with: recipe.recipe_name
       select  kitchen.name,            from: 'Cozinha'
-      select  type_of_food.name,       from: 'Tipo de comida'
+      select  type.name,               from: 'Tipo de Comida'
       fill_in 'Quantas Pessoas Serve', with: recipe.how_many_people_serves
       fill_in 'Tempo de Preparação',   with: recipe.preparation_time
       fill_in 'Nivel de Dificuldade',  with: recipe.difficulty_level
@@ -31,7 +30,7 @@ feature 'user create recipes' do
 
       expect(page).to have_css("h2", text: recipe.recipe_name)
       expect(page).to have_content kitchen.name
-      expect(page).to have_content type_of_food.name
+      expect(page).to have_content type.name
       expect(page).to have_content recipe.how_many_people_serves
       expect(page).to have_content recipe.preparation_time
       expect(page).to have_content recipe.difficulty_level

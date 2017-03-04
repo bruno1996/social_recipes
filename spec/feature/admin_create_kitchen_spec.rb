@@ -4,9 +4,9 @@ require 'rails_helper'
     scenario 'successfully' do
                       kitchen = Kitchen.create(name:'Japonesa')
 
-                      type_of_food = Type_of_food.create(name:'Sobremesa')
+                      type = Type.create(name:'Sobremesa')
 
-                      recipe = Recipe.create(recipe_name:'Torta de Abacaxi',
+                      recipe = Recipe.new(recipe_name:'Torta de Abacaxi',
                                               how_many_people_serves:'10 porçoẽs',
                                               preparation_time:'50 min',
                                               difficulty_level:'medio',
