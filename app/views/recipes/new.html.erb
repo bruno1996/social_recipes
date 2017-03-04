@@ -2,8 +2,12 @@
 
 <%= flash[:error] %>
 
-<%= form_for @recipe do |f| %>
+<%= form_for @recipe, html: { multipart: true } do |f| %>
 <dl>
+
+  <dt><%= f.label :avatar %></dt>
+  <dd><%= f.file_field :avatar %></dd>
+
   <dt><%= f.label :recipe_name, 'Nome da Receita' %></dt>
   <dd><%= f.text_field :recipe_name %></dd>
 
@@ -26,9 +30,9 @@
   <dd><%= f.text_field :ingredients %></dd>
 
   <dt><%= f.label :step_by_step, 'Passo a Passo' %></dt>
-  <dd><%= f.text_field :step_by_step %></dd>
+  <dd><%= f.text_area :step_by_step %></dd>
 
-<%= f.submit 'Postar Receita' %>
+  <dt><%= f.submit 'Postar Receita' %></dt>
 </dl>
 <% end %>
 

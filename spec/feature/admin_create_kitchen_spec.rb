@@ -4,8 +4,9 @@ require 'rails_helper'
     scenario 'successfully' do
                       kitchen = Kitchen.create(name:'Japonesa')
 
+                      type_of_food = Type_of_food.create(name:'Sobremesa')
+
                       recipe = Recipe.create(recipe_name:'Torta de Abacaxi',
-                                              type_of_food:'Sobremesa',
                                               how_many_people_serves:'10 porçoẽs',
                                               preparation_time:'50 min',
                                               difficulty_level:'medio',
@@ -35,6 +36,14 @@ require 'rails_helper'
       click_on 'Postar Cozinha'
 
       expect(page).to have_content('PREENCHA O NOME DA COZINHA')
+
+      click_on 'Voltar'
+    end
+    scenario 'back in show' do
+
+      visit root_path
+
+      click_on 'Cadastrar Cozinha'
 
       click_on 'Voltar'
     end
