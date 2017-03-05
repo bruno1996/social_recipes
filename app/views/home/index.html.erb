@@ -6,7 +6,8 @@
 
 <dl>
 <% @recipes.each do |recipe| %>
-  <dt><%= image_tag recipe.avatar.url(:medium) %></dt>
+  <dt>Foto</dt>
+  <dd><%= image_tag recipe.avatar.url(:medium) %></dd>
   <dt> Nome da Receita </dt>
   <dd><%= recipe.recipe_name %></dd>
   <dt> Cozinha </dt>
