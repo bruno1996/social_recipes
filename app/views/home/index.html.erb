@@ -4,6 +4,12 @@
 <%= link_to 'Cadastrar Cozinha', new_kitchen_path %> <br>
 <%= link_to 'Cadastrar Tipo de Comida', new_type_path %>
 
+
+<% @kitchens.each do |kitchen| %>
+  <h2><%= link_to kitchen.name, kitchen_path(kitchen) %></h2>
+<% end %>
+
+
 <dl>
 <% @recipes.each do |recipe| %>
   <dt>Foto</dt>
@@ -28,3 +34,7 @@
   <br>
 <% end %>
 </dl>
+
+<% @kitchens.each do |kitchen| %>
+  <h2><%= link_to kitchen.name, kitchen_path(kitchen) %></h2>
+<% end %>

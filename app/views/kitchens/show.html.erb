@@ -1,5 +1,30 @@
 <h2>Cozinha Cadastrada</h2>
 
-<%= @kitchen.name %> <br>
+<h3><%= @kitchen.name %></h3> <br>
+
+<h2>Receitas De <%=@kitchen.name %>
+
+<dl>
+<% @kitchens.recipes.each do |kitchen| %>
+  <dt>Foto</dt>
+  <dd><%= image_tag recipe.avatar.url(:medium) %></dd>
+  <dt> Nome da Receita </dt>
+  <dd><%= recipe.recipe_name %></dd>
+  <dt> Cozinha </dt>
+  <dd><%= recipe.kitchen_id %></dd>
+  <dt> Tipo de Comida </dt>
+  <dd><%= recipe.type_id %></dd>
+  <dt> Quantas Pessoas Serve </dt>
+  <dd><%= recipe.how_many_people_serves %></dd>
+  <dt> Tempo de Preparação </dt>
+  <dd><%= recipe.preparation_time %></dd>
+  <dt> Nivel de Dificuldade </dt>
+  <dd><%= recipe.difficulty_level %></dd>
+  <dt> Ingredientes </dt>
+  <dd><%= recipe.ingredients %></dd>
+  <dt> Passo a Passo </dt>
+  <dd><%= recipe.step_by_step %></dd>
+<% end %>
+</dl>
 
 <%= link_to 'Voltar', root_path %>

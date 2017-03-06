@@ -5,7 +5,7 @@
 <%= form_for @recipe, html: { multipart: true } do |f| %>
 <dl>
 
-  <dt><%= f.label :avatar %></dt>
+  <dt><%= f.label :avatar, 'Foto' %></dt>
   <dd><%= f.file_field :avatar %></dd>
 
   <dt><%= f.label :recipe_name, 'Nome da Receita' %></dt>

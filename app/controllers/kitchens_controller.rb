@@ -19,6 +19,7 @@ class KitchensController < ApplicationController
     end
   end
   def show
+    @recipes = Recipe.all
     @kitchen = Kitchen.find params[:id]
   end
 end
