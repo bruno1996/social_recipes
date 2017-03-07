@@ -2,18 +2,18 @@
 
 <h3><%= @kitchen.name %></h3> <br>
 
-<h2>Receitas De <%=@kitchen.name %>
+<h2>Receitas De Cozinha <%=@kitchen.name %>
 
 <dl>
-<% @kitchens.recipes.each do |kitchen| %>
+<% @kitchen.recipes.each do |recipe| %>
   <dt>Foto</dt>
   <dd><%= image_tag recipe.avatar.url(:medium) %></dd>
   <dt> Nome da Receita </dt>
   <dd><%= recipe.recipe_name %></dd>
   <dt> Cozinha </dt>
-  <dd><%= recipe.kitchen_id %></dd>
+  <dd><%= recipe.kitchen.name %></dd>
   <dt> Tipo de Comida </dt>
-  <dd><%= recipe.type_id %></dd>
+  <dd><%= recipe.type.name %></dd>
   <dt> Quantas Pessoas Serve </dt>
   <dd><%= recipe.how_many_people_serves %></dd>
   <dt> Tempo de Preparação </dt>
