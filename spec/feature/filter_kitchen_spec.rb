@@ -49,4 +49,14 @@ feature 'filter kitchen' do
 
 
   end
+    scenario 'alert kitchen no recipes' do
+
+                          kitchen = Kitchen.create(name:'Indiana')
+
+          visit root_path
+
+          click_on 'Indiana'
+
+          expect(page).to have_content("Sem Receitas Para Essa Cozinha")
+  end
 end

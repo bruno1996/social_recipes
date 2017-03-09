@@ -2,10 +2,9 @@
 
 <%= flash[:error] %>
 <dl>
-<%= form_for @type do |f| %>
+<%= simple_form_for @type do |f| %>
 
-  <dt><%= f.label :name, 'Tipo de Comida' %></dt>
-  <dd><%= f.text_field :name %></dd>
+  <dt><%= f.input :name,label: 'Tipo de Comida',error: "Campo Obrigatório" %></dt>
 
   <%= f.submit 'Postar Tipo de Comida' %>
 <% end %>

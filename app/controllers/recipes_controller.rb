@@ -21,7 +21,7 @@ class RecipesController < ApplicationController
     if @recipe.save
       redirect_to @recipe
     else
-      flash[:error] = 'PREENCHA OS CAMPOS EM BRANCO'
+      flash[:error] = 'PREÉNCHA OS CAMPOS EM BRANCO'
       render :new
     end
   end

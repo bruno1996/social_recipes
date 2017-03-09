@@ -47,7 +47,7 @@ feature 'user create recipes' do
 
     click_on 'Postar Receita'
 
-    expect(page).to have_content 'PREENCHA OS CAMPOS EM BRANCO'
+    expect(page).to have_content 'PREÉNCHA OS CAMPOS EM BRANCO'
   end
   scenario 'Test back new recipe' do
 

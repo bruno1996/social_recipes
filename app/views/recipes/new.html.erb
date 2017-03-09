@@ -2,35 +2,26 @@
 
 <%= flash[:error] %>
 
-<%= form_for @recipe, html: { multipart: true } do |f| %>
+<%= simple_form_for @recipe, html: { multipart: true } do |f| %>
 <dl>
 
-  <dt><%= f.label :avatar, 'Foto' %></dt>
-  <dd><%= f.file_field :avatar %></dd>
+  <dt><%= f.input :avatar,label: 'Foto',error: "Campo Obrigatório" %></dt>
 
-  <dt><%= f.label :recipe_name, 'Nome da Receita' %></dt>
-  <dd><%= f.text_field :recipe_name %></dd>
+  <dt><%= f.input :recipe_name,label: 'Nome da Receita', error: "Campo Obrigatório" %></dt>
 
-  <dt><%= f.label :kitchen_id, 'Cozinha' %></dt>
-  <dd><%= f.collection_select(:kitchen_id, @kitchens , :id, :name) %></dd>
+  <dt><%= f.association :kitchen, label_method: :name, value_method: :id, label: "Cozinha", error: "Campo Obrigatório"%></dt>
 
-  <dt><%= f.label :type_id, 'Tipo de Comida' %></dt>
-  <dd><%= f.collection_select(:type_id, @types, :id, :name) %></dd>
+  <dt><%= f.association :type, label_method: :name, value_method: :id, label: 'Tipo de Comida', error: "Campo Obrigatório" %></dt>
 
-  <dt><%= f.label :how_many_people_serves, 'Quantas Pessoas Serve' %></dt>
-  <dd><%= f.text_field :how_many_people_serves %></dd>
+  <dt><%= f.input :how_many_people_serves,label: 'Quantas Pessoas Serve',error: "Campo Obrigatório" %></dt>
 
-  <dt><%= f.label :preparation_time, 'Tempo de Preparação' %></dt>
-  <dd><%= f.text_field :preparation_time %></dd>
+  <dt><%= f.input :preparation_time,label: 'Tempo de Preparação',error: "Campo Obrigatório" %></dt>
 
-  <dt><%= f.label :difficulty_level, 'Nivel de Dificuldade'%></dt>
-  <dd><%= f.text_field :difficulty_level %></dd>
+  <dt><%= f.input :difficulty_level,label: 'Nivel de Dificuldade',error: "Campo Obrigatório"%></dt>
 
-  <dt><%= f.label :ingredients, 'Ingredients' %></dt>
-  <dd><%= f.text_field :ingredients %></dd>
+  <dt><%= f.input :ingredients,label: 'Ingredients',error: "Campo Obrigatório" %></dt>
 
-  <dt><%= f.label :step_by_step, 'Passo a Passo' %></dt>
-  <dd><%= f.text_area :step_by_step %></dd>
+  <dt><%= f.input :step_by_step,label: 'Passo a Passo',error: "Campo Obrigatório" %></dt>
 
   <dt><%= f.submit 'Postar Receita' %></dt>
 </dl>

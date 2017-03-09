@@ -2,10 +2,9 @@
 
 <%= flash[:error] %>
 <dl>
-<%= form_for @kitchen do |f| %>
+<%= simple_form_for @kitchen do |f| %>
 
-  <dt><%= f.label :name, 'Nome da Cozinha' %></dt>
-  <dd><%= f.text_field :name %></dd>
+  <dt><%= f.input :name,label: 'Nome da Cozinha',error: "Campo Obrigatório" %></dt>
 
   <%= f.submit 'Postar Cozinha' %>
 

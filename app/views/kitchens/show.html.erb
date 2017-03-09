@@ -27,4 +27,8 @@
 <% end %>
 </dl>
 
+<% if @kitchen.recipes.empty? %>
+  Sem Receitas Para Essa Cozinha
+<% end %>
+
 <%= link_to 'Voltar', root_path %>
