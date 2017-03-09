@@ -1,8 +1,8 @@
 <h2>Cozinha Cadastrada</h2>
 
-<h3><%= @kitchen.name %></h3> <br>
+<%= @kitchen.name %> <br>
 
-<h2>Receitas De Cozinha <%=@kitchen.name %>
+<h2>Receitas De Cozinha <%=@kitchen.name %></h2>
 
 <dl>
 <% @kitchen.recipes.each do |recipe| %>
@@ -30,5 +30,7 @@
 <% if @kitchen.recipes.empty? %>
   Sem Receitas Para Essa Cozinha
 <% end %>
+
+<br>
 
 <%= link_to 'Voltar', root_path %>

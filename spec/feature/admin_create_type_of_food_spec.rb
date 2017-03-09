@@ -1,16 +1,8 @@
 require 'rails_helper'
   feature 'create type of food' do
     scenario 'successfully' do
-                    kitchen = Kitchen.create(name:'Japonesa')
 
-                    type = Type.create(name:'Sobremesa')
-
-                    recipe = Recipe.new(recipe_name:'Torta de Abacaxi',
-                                          how_many_people_serves:'10 porçoẽs',
-                                          preparation_time:'50 min',
-                                          difficulty_level:'medio',
-                                          ingredients:'Massa de Torta e Abacaxi',
-                                          step_by_step:'Misture tudo e Joga no Forno')
+                    type = create(:type)
 
       visit root_path
 

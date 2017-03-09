@@ -2,16 +2,11 @@ require 'rails_helper'
 
 feature 'user view recipes' do
   scenario 'successfully' do
-                kitchen = Kitchen.create(name:'Japonesa')
+                kitchen = create(:kitchen)
 
-                type = Type.create(name:'Sobremesa')
+                type = create(:type)
 
-                recipe = Recipe.create(recipe_name:'Torta de Abacaxi',
-                                    how_many_people_serves:'10 porçoẽs',
-                                    preparation_time:'50 min',
-                                    difficulty_level:'medio',
-                                    ingredients:'Massa de Torta e Abacaxi',
-                                    step_by_step:'Misture tudo e Joga no Forno')
+                recipe = Recipe.create(kitchen: kitchen, type: type)
 
       visit root_path
 
