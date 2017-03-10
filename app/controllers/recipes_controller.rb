@@ -16,7 +16,8 @@ class RecipesController < ApplicationController
   def create
     @types = Type.all
     @kitchens = Kitchen.all
-    recipe_params = params.require(:recipe).permit(:recipe_name,:kitchen_id,:type_id,:how_many_people_serves,:preparation_time,:difficulty_level,:ingredients,:step_by_step,:avatar)
+    recipe_params = params.require(:recipe).permit(:recipe_name,:kitchen_id,:type_id,:how_many_people_serves,
+                                                   :preparation_time,:difficulty_level,:ingredients,:step_by_step,:avatar)
     @recipe = Recipe.new(recipe_params)
     if @recipe.save
       redirect_to @recipe

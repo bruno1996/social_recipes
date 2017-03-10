@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-03-09T13:57:37-03:00">2017-03-09T13:57:37-03:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-03-10T15:35:08-03:00">2017-03-10T15:35:08-03:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">92.63%</span></span>
+    (<span class="covered_percent"><span class="green">97.79%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.24
+         1.6
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>36</b> files in total.
-    <b>339</b> relevant lines. 
-    <span class="green"><b>314</b> lines covered</span> and
-    <span class="red"><b>25</b> lines missed </span>
+    <b>317</b> relevant lines. 
+    <span class="green"><b>310</b> lines covered</span> and
+    <span class="red"><b>7</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -83,11 +83,11 @@
       <tr>
         <td class="strong"><a href="#dc086b8eadbd145899271179f879f04bf518eeac" class="src_link" title="app/controllers/recipes_controller.rb">app/controllers/recipes_controller.rb</a></td>
         <td class="yellow strong">85.71 %</td>
-        <td>28</td>
+        <td>29</td>
         <td>21</td>
         <td>18</td>
         <td>3</td>
-        <td>2.9</td>
+        <td>2.4</td>
       </tr>
       
       <tr>
@@ -313,7 +313,7 @@
       <tr>
         <td class="strong"><a href="#c80d59fe0b99739ecfd0e69178907adcb4e46077" class="src_link" title="spec/factories/kitchen.rb">spec/factories/kitchen.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>7</td>
+        <td>5</td>
         <td>3</td>
         <td>3</td>
         <td>0</td>
@@ -327,7 +327,7 @@
         <td>11</td>
         <td>11</td>
         <td>0</td>
-        <td>1.0</td>
+        <td>2.9</td>
       </tr>
       
       <tr>
@@ -391,13 +391,13 @@
       </tr>
       
       <tr>
-        <td class="strong"><a href="#9105e9e8558ec1c24c68c254bc74f5d9ef6fb19e" class="src_link" title="spec/feature/user_view_receipts_home_spec.rb">spec/feature/user_view_receipts_home_spec.rb</a></td>
-        <td class="red strong">51.35 %</td>
-        <td>50</td>
-        <td>37</td>
-        <td>19</td>
-        <td>18</td>
-        <td>0.5</td>
+        <td class="strong"><a href="#8114eee5403a72e2d7652dd3080343d194c08e08" class="src_link" title="spec/feature/view_20_lasts_spec.rb">spec/feature/view_20_lasts_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>22</td>
+        <td>15</td>
+        <td>15</td>
+        <td>0</td>
+        <td>6.3</td>
       </tr>
       
       <tr>
@@ -764,20 +764,20 @@
           <code class="ruby">  def new</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="12">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="5" data-linenumber="12">
+          <span class="hits">5</span>
           
           <code class="ruby">    @types = Type.all</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="13">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="5" data-linenumber="13">
+          <span class="hits">5</span>
           
           <code class="ruby">    @kitchens = Kitchen.all</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="14">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="5" data-linenumber="14">
+          <span class="hits">5</span>
           
           <code class="ruby">    @recipe = Recipe.new</code>
         </li>
@@ -794,73 +794,79 @@
           <code class="ruby">  def create</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="17">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="4" data-linenumber="17">
+          <span class="hits">4</span>
           
           <code class="ruby">    @types = Type.all</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="18">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="4" data-linenumber="18">
+          <span class="hits">4</span>
           
           <code class="ruby">    @kitchens = Kitchen.all</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="19">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="4" data-linenumber="19">
+          <span class="hits">4</span>
           
-          <code class="ruby">    recipe_params = params.require(:recipe).permit(:recipe_name,:kitchen_id,:type_id,:how_many_people_serves,:preparation_time,:difficulty_level,:ingredients,:step_by_step,:avatar)</code>
+          <code class="ruby">    recipe_params = params.require(:recipe).permit(:recipe_name,:kitchen_id,:type_id,:how_many_people_serves,</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="20">
-          <span class="hits">5</span>
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby">                                                   :preparation_time,:difficulty_level,:ingredients,:step_by_step,:avatar)</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="21">
+          <span class="hits">4</span>
           
           <code class="ruby">    @recipe = Recipe.new(recipe_params)</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="21">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="4" data-linenumber="22">
+          <span class="hits">4</span>
           
           <code class="ruby">    if @recipe.save</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="22">
+        <li class="covered" data-hits="3" data-linenumber="23">
           <span class="hits">3</span>
           
           <code class="ruby">      redirect_to @recipe</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="23">
+        <li class="never" data-hits="" data-linenumber="24">
           
           
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="24">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="25">
+          <span class="hits">1</span>
           
           <code class="ruby">      flash[:error] = &#39;PREÉNCHA OS CAMPOS EM BRANCO&#39;</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="25">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="26">
+          <span class="hits">1</span>
           
           <code class="ruby">      render :new</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="26">
-          
-          
-          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="27">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="28">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="29">
           
           
           <code class="ruby">end</code>
@@ -3590,31 +3596,19 @@
           <code class="ruby">  factory :kitchen do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="3">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="4">
+        <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
           <code class="ruby">    name &quot;Inglesa&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="5">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="6">
+        <li class="never" data-hits="" data-linenumber="4">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="7">
+        <li class="never" data-hits="" data-linenumber="5">
           
           
           <code class="ruby">end</code>
@@ -3674,8 +3668,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="7">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="22" data-linenumber="7">
+          <span class="hits">22</span>
           
           <code class="ruby">    avatar { File.new(&quot;#{Rails.root}/spec/pictures/Torta-de-Abacaxi.jpg&quot;)}</code>
         </li>
@@ -5370,14 +5364,14 @@
   </pre>
 </div>
       
-        <div class="source_table" id="9105e9e8558ec1c24c68c254bc74f5d9ef6fb19e">
+        <div class="source_table" id="8114eee5403a72e2d7652dd3080343d194c08e08">
   <div class="header">
-    <h3>spec/feature/user_view_receipts_home_spec.rb</h3>
-    <h4><span class="red">51.35 %</span> covered</h4>
+    <h3>spec/feature/view_20_lasts_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>37</b> relevant lines. 
-      <span class="green"><b>19</b> lines covered</span> and
-      <span class="red"><b>18</b> lines missed.</span>
+      <b>15</b> relevant lines. 
+      <span class="green"><b>15</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -5387,301 +5381,133 @@
         <li class="covered" data-hits="1" data-linenumber="1">
           <span class="hits">1</span>
           
-          <code class="ruby">require &#39;rails_helper&#39;</code>
+          <code class="ruby">require &quot;rails_helper&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="2">
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby"> feature &#39;view 20 lasts&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">feature &#39;user view recipes&#39; do</code>
+          <code class="ruby">   scenario &#39;successfully&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
-          <code class="ruby">  scenario &#39;successfully&#39; do</code>
+          <code class="ruby">     first_recipe = Recipe.create( recipe_name:&quot;Bolo de Cenoura&quot;, difficulty_level:&quot;Fácil&quot;, how_many_people_serves: &quot;8 Pessoas&quot;, preparation_time:60)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="5">
-          <span class="hits">1</span>
-          
-          <code class="ruby">                kitchen = create(:kitchen)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="6">
+        <li class="never" data-hits="" data-linenumber="5">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="7">
+        <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
-          <code class="ruby">                type = create(:type)</code>
+          <code class="ruby">      recipes = create_list(:recipe, 21)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="8">
+        <li class="never" data-hits="" data-linenumber="7">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="9">
-          <span class="hits">1</span>
-          
-          <code class="ruby">                recipe = Recipe.create(kitchen: kitchen, type: type)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="10">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="11">
+        <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
           
           <code class="ruby">      visit root_path</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="never" data-hits="" data-linenumber="9">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="13">
+        <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
-          <code class="ruby">      click_on &#39;Cadastrar Receita&#39;</code>
+          <code class="ruby">      recipes.each do |recipe|</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="14">
+        <li class="covered" data-hits="21" data-linenumber="11">
+          <span class="hits">21</span>
+          
+          <code class="ruby">        expect(page).to have_css(&quot;h2&quot;, text: recipe.recipe_name)</code>
+        </li>
+      
+        <li class="covered" data-hits="21" data-linenumber="12">
+          <span class="hits">21</span>
+          
+          <code class="ruby">        expect(page).to have_content(recipe.difficulty_level)</code>
+        </li>
+      
+        <li class="covered" data-hits="21" data-linenumber="13">
+          <span class="hits">21</span>
+          
+          <code class="ruby">        expect(page).to have_content(recipe.how_many_people_serves)</code>
+        </li>
+      
+        <li class="covered" data-hits="21" data-linenumber="14">
+          <span class="hits">21</span>
+          
+          <code class="ruby">        expect(page).to have_content(recipe.preparation_time)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
           
           
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="15">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      fill_in &#39;Nome da Receita&#39;,       with: recipe.recipe_name</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="16">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      select  kitchen.name,            from: &#39;Cozinha&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="17">
           <span class="hits">1</span>
           
-          <code class="ruby">      select  type.name,               from: &#39;Tipo de Comida&#39;</code>
+          <code class="ruby">    expect(page).not_to have_content(first_recipe.recipe_name)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="18">
           <span class="hits">1</span>
           
-          <code class="ruby">      fill_in &#39;Quantas Pessoas Serve&#39;, with: recipe.how_many_people_serves</code>
+          <code class="ruby">    expect(page).not_to have_content(first_recipe.difficulty_level)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="19">
           <span class="hits">1</span>
           
-          <code class="ruby">      fill_in &#39;Tempo de Preparação&#39;,   with: recipe.preparation_time</code>
+          <code class="ruby">    expect(page).not_to have_content(first_recipe.how_many_people_serves)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="20">
           <span class="hits">1</span>
           
-          <code class="ruby">      fill_in &#39;Nivel de Dificuldade&#39;,  with: recipe.difficulty_level</code>
+          <code class="ruby">    expect(page).not_to have_content(first_recipe.preparation_time)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="21">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="21">
           
-          <code class="ruby">      fill_in &#39;Ingredients&#39;,           with: recipe.ingredients</code>
+          
+          <code class="ruby">   end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="22">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      fill_in &#39;Passo a Passo&#39;,         with: recipe.step_by_step</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="23">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      attach_file(&#39;Foto&#39;,&quot;spec/pictures/Torta-de-Abacaxi.jpg&quot;)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="24">
+        <li class="never" data-hits="" data-linenumber="22">
           
           
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="25">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      click_on &#39;Postar Receita&#39;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="26">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="27">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      expect(page).to have_xpath(&quot;//img[contains(@src, &#39;Torta-de-Abacaxi&#39;)]&quot;)</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="28">
-          
-          
-          <code class="ruby">      expect(page).to have_css(&quot;h2&quot;, text: recipe.recipe_name)</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="29">
-          
-          
-          <code class="ruby">      expect(page).to have_content kitchen.name</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="30">
-          
-          
-          <code class="ruby">      expect(page).to have_content type.name</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="31">
-          
-          
-          <code class="ruby">      expect(page).to have_content recipe.how_many_people_serves</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="32">
-          
-          
-          <code class="ruby">      expect(page).to have_content recipe.preparation_time</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="33">
-          
-          
-          <code class="ruby">      expect(page).to have_content recipe.difficulty_level</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="34">
-          
-          
-          <code class="ruby">      expect(page).to have_content recipe.ingredients</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="35">
-          
-          
-          <code class="ruby">      expect(page).to have_content recipe.step_by_step</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="36">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="37">
-          
-          
-          <code class="ruby">      click_on &#39;Voltar&#39;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="38">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="39">
-          
-          
-          <code class="ruby">      expect(page).to have_xpath(&quot;//img[contains(@src, &#39;Torta-de-Abacaxi&#39;)]&quot;)</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="40">
-          
-          
-          <code class="ruby">      expect(page).to have_content recipe.recipe_name</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="41">
-          
-          
-          <code class="ruby">      expect(page).to have_content kitchen.name</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="42">
-          
-          
-          <code class="ruby">      expect(page).to have_content type.name</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="43">
-          
-          
-          <code class="ruby">      expect(page).to have_content recipe.how_many_people_serves</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="44">
-          
-          
-          <code class="ruby">      expect(page).to have_content recipe.preparation_time</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="45">
-          
-          
-          <code class="ruby">      expect(page).to have_content recipe.difficulty_level</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="46">
-          
-          
-          <code class="ruby">      expect(page).to have_content recipe.ingredients</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="47">
-          
-          
-          <code class="ruby">      expect(page).to have_content recipe.step_by_step</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="48">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="49">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="50">
-          
-          
-          <code class="ruby">  end</code>
+          <code class="ruby"> end</code>
         </li>
       
     </ol>
