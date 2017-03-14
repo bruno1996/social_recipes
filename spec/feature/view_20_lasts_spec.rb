@@ -1,7 +1,10 @@
 require "rails_helper"
  feature 'view 20 lasts' do
    scenario 'successfully' do
-     first_recipe = Recipe.create( recipe_name:"Bolo de Cenoura", difficulty_level:"Fácil", how_many_people_serves: "8 Pessoas", preparation_time:60)
+     first_recipe = Recipe.create(recipe_name:"Bolo de Cenoura",
+                                  difficulty_level:"Fácil",
+                                  how_many_people_serves: "8 Pessoas",
+                                  preparation_time:60)
 
       recipes = create_list(:recipe, 21)
 
