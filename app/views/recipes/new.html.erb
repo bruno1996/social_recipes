@@ -2,29 +2,33 @@
 
 <%= flash[:error] %>
 
+<div class="form-group">
+
 <%= simple_form_for @recipe, html: { multipart: true } do |f| %>
-<dl>
+  <dl class="form-horizontal">
 
-  <dt><%= f.input :avatar,label: 'Foto',error: "Campo Obrigatório" %></dt>
+    <dt><%= f.input :avatar,label: 'Foto',error: "Campo Obrigatório" %></dt>
 
-  <dt><%= f.input :recipe_name,label: 'Nome da Receita', error: "Campo Obrigatório" %></dt>
+    <dt class="form-control"><%= f.input :recipe_name,label: 'Nome da Receita', error: "Campo Obrigatório" %></dt>
 
-  <dt><%= f.association :kitchen, label_method: :name, value_method: :id, label: "Cozinha", error: "Campo Obrigatório"%></dt>
+    <dt class="form-control"><%= f.association :kitchen, label_method: :name, value_method: :id, label: "Cozinha", error: "Campo Obrigatório"%></dt>
 
-  <dt><%= f.association :type, label_method: :name, value_method: :id, label: 'Tipo de Comida', error: "Campo Obrigatório" %></dt>
+    <dt class="form-control"><%= f.association :type, label_method: :name, value_method: :id, label: 'Tipo de Comida', error: "Campo Obrigatório" %></dt>
 
-  <dt><%= f.input :how_many_people_serves,label: 'Quantas Pessoas Serve',error: "Campo Obrigatório" %></dt>
+    <dt class="form-control"><%= f.input :how_many_people_serves,label: 'Quantas Pessoas Serve',error: "Campo Obrigatório" %></dt>
 
-  <dt><%= f.input :preparation_time,label: 'Tempo de Preparação',error: "Campo Obrigatório" %></dt>
+    <dt class="form-control"><%= f.input :preparation_time,label: 'Tempo de Preparação',error: "Campo Obrigatório" %></dt>
 
-  <dt><%= f.input :difficulty_level,label: 'Nivel de Dificuldade',error: "Campo Obrigatório"%></dt>
+    <dt class="form-control"><%= f.input :difficulty_level,label: 'Nivel de Dificuldade',error: "Campo Obrigatório"%></dt>
 
-  <dt><%= f.input :ingredients,label: 'Ingredients',error: "Campo Obrigatório" %></dt>
+    <dt class="form-control"><%= f.input :ingredients,label: 'Ingredients',error: "Campo Obrigatório" %></dt>
 
-  <dt><%= f.input :step_by_step,label: 'Passo a Passo',error: "Campo Obrigatório" %></dt>
+    <dt class="form-control"><%= f.input :step_by_step,label: 'Passo a Passo',error: "Campo Obrigatório" %></dt>
 
-  <dt><%= f.submit 'Postar Receita' %></dt>
-</dl>
+    <dt><%= f.submit 'Postar Receita' %></dt>
+  </dl>
 <% end %>
 
-<%= link_to 'Voltar', root_path %>
+</div>
+
+<h3><strong><%= link_to 'Voltar', root_path %></strong></h3>

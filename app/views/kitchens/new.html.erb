@@ -1,13 +1,18 @@
 <h2>Cadastrando Cozinha</h2>
 
 <%= flash[:error] %>
-<dl>
-<%= simple_form_for @kitchen do |f| %>
 
-  <dt><%= f.input :name,label: 'Nome da Cozinha',error: "Campo Obrigatório" %></dt>
 
-  <%= f.submit 'Postar Cozinha' %>
+<div class="form-group">
+<dl class="form-horizontal">
+    <%= simple_form_for @kitchen do |f| %>
 
-<% end %>
-</dl>
-<%= link_to 'Voltar', root_path %>
+      <dt class="form-control"><%= f.input :name,label: 'Nome da Cozinha',error: "Campo Obrigatório" %>
+      <br>
+      <%= f.submit 'Postar Cozinha' %></dt>
+
+    <% end %>
+  </dl>
+</div>
+<br><br>
+<h3><strong><%= link_to 'Voltar', root_path %></strong></h3>

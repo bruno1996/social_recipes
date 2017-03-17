@@ -1,36 +1,40 @@
 <h1>Social Receipts</h1>
-
-<%= link_to 'Cadastrar Receita', new_recipe_path %> <br>
-<%= link_to 'Cadastrar Cozinha', new_kitchen_path %> <br>
-<%= link_to 'Cadastrar Tipo de Comida', new_type_path %>
-
-
-<% @kitchens.each do |kitchen| %>
-  <h2><%= link_to kitchen.name, kitchen_path(kitchen) %></h2>
-<% end %>
-
-
-<dl>
-<% @recipes.each do |recipe| %>
-  <dt>Foto</dt>
-  <dd><%= image_tag recipe.avatar.url(:medium) %></dd>
-  <dt> Nome da Receita </dt>
-  <h2><dd><%= recipe.recipe_name %></dd></h2>
-  <dt> Cozinha </dt>
-  <dd><%= recipe.kitchen.name %></dd>
-  <dt> Tipo de Comida </dt>
-  <dd><%= recipe.type.name %></dd>
-  <dt> Quantas Pessoas Serve </dt>
-  <dd><%= recipe.how_many_people_serves %></dd>
-  <dt> Tempo de Preparação </dt>
-  <dd><%= recipe.preparation_time %></dd>
-  <dt> Nivel de Dificuldade </dt>
-  <dd><%= recipe.difficulty_level %></dd>
-  <dt> Ingredientes </dt>
-  <dd><%= recipe.ingredients %></dd>
-  <dt> Passo a Passo </dt>
-  <dd><%= recipe.step_by_step %></dd>
-  <br>
-  <br>
-<% end %>
-</dl>
+<div class="col-md-4">
+  <h2>Menu</h2>
+  <div class="btn btn-info"><%= link_to 'Cadastrar Receita', new_recipe_path %></div> <br>
+  <div class="btn btn-info"><%= link_to 'Cadastrar Cozinha', new_kitchen_path %></div> <br>
+  <div class="btn btn-info"><%= link_to 'Cadastrar Tipo de Comida', new_type_path %></div>
+</div>
+<div class="col-md-4 col-md-offset-4">
+  <h2>Cozinhas</h2>
+  <% @kitchens.each do |kitchen| %>
+    <h2><%= link_to kitchen.name, kitchen_path(kitchen) %></h2>
+  <% end %>
+</div>
+<div class="col-md-9 col-md-push-3">
+  <dl>
+  <h2>Receitas</h2>
+  <% @recipes.each do |recipe| %>
+    <dt>Foto</dt>
+    <dd><%= image_tag recipe.avatar.url(:medium) %></dd>
+    <dt> Nome da Receita </dt>
+    <h2><dd><%= recipe.recipe_name %></dd></h2>
+    <dt> Cozinha </dt>
+    <dd><%= recipe.kitchen.name %></dd>
+    <dt> Tipo de Comida </dt>
+    <dd><%= recipe.type.name %></dd>
+    <dt> Quantas Pessoas Serve </dt>
+    <dd><%= recipe.how_many_people_serves %></dd>
+    <dt> Tempo de Preparação </dt>
+    <dd><%= recipe.preparation_time %></dd>
+    <dt> Nivel de Dificuldade </dt>
+    <dd><%= recipe.difficulty_level %></dd>
+    <dt> Ingredientes </dt>
+    <dd><%= recipe.ingredients %></dd>
+    <dt> Passo a Passo </dt>
+    <dd><%= recipe.step_by_step %></dd>
+    <br>
+    <br>
+  <% end %>
+  </dl>
+</div>

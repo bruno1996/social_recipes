@@ -1,36 +1,36 @@
+<%if @kitchen.recipes.empty?%>
 <h2>Cozinha Cadastrada</h2>
-
-<%= @kitchen.name %> <br>
-
+<h3><%= @kitchen.name %></h3> <br>
+<%else%>
 <h2>Receitas De Cozinha <%=@kitchen.name %></h2>
 
 <dl>
 <% @kitchen.recipes.each do |recipe| %>
-  <dt>Foto</dt>
+  <h3><dt>Foto</dt></h3>
   <dd><%= image_tag recipe.avatar.url(:medium) %></dd>
-  <dt> Nome da Receita </dt>
-  <dd><%= recipe.recipe_name %></dd>
-  <dt> Cozinha </dt>
-  <dd><%= recipe.kitchen.name %></dd>
-  <dt> Tipo de Comida </dt>
-  <dd><%= recipe.type.name %></dd>
-  <dt> Quantas Pessoas Serve </dt>
-  <dd><%= recipe.how_many_people_serves %></dd>
-  <dt> Tempo de Preparação </dt>
-  <dd><%= recipe.preparation_time %></dd>
-  <dt> Nivel de Dificuldade </dt>
-  <dd><%= recipe.difficulty_level %></dd>
-  <dt> Ingredientes </dt>
-  <dd><%= recipe.ingredients %></dd>
-  <dt> Passo a Passo </dt>
-  <dd><%= recipe.step_by_step %></dd>
+  <h3><dt> Nome da Receita </dt></h3>
+  <h4><dd><%= recipe.recipe_name %></dd></h4>
+  <h3><dt> Cozinha </dt></h3>
+  <h4><dd><%= recipe.kitchen.name %></dd>
+  <h3><dt> Tipo de Comida </dt></h3>
+  <h4><dd><%= recipe.type.name %></dd>
+  <h3><dt> Quantas Pessoas Serve </dt></h3>
+  <h4><dd><%= recipe.how_many_people_serves %></dd>
+  <h3><dt> Tempo de Preparação </dt></h3>
+  <h4><dd><%= recipe.preparation_time %></dd>
+  <h3><dt> Nivel de Dificuldade </dt></h3>
+  <h4><dd><%= recipe.difficulty_level %></dd>
+  <h3><dt> Ingredientes </dt></h3>
+  <h4><dd><%= recipe.ingredients %></dd>
+  <h3><dt> Passo a Passo </dt></h3>
+  <h4><dd><%= recipe.step_by_step %></dd>
 <% end %>
 </dl>
-
+<%end%>
 <% if @kitchen.recipes.empty? %>
-  Sem Receitas Para Essa Cozinha
+  <h3>Sem Receitas Para Essa Cozinha</h3>
 <% end %>
 
 <br>
 
-<%= link_to 'Voltar', root_path %>
+<h3><strong><%= link_to 'Voltar', root_path %></strong></h3>
