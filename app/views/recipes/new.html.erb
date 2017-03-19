@@ -1,7 +1,8 @@
 <h1>Nova Receita</h1>
 
-<%= flash[:error] %>
+<h3><strong><%= link_to 'Voltar', root_path %></strong></h3>
 
+<%= flash[:error] %>
 <div class="form-group">
 
 <%= simple_form_for @recipe, html: { multipart: true } do |f| %>
@@ -30,5 +31,3 @@
 <% end %>
 
 </div>
-
-<h3><strong><%= link_to 'Voltar', root_path %></strong></h3>

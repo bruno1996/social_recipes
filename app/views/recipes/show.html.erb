@@ -1,13 +1,21 @@
-<dl>
-  <dt><%= image_tag @recipe.avatar.url(:medium) %></dt>
-  <dt><h2><%= @recipe.recipe_name %></h2></dt>
-  <dt><%= @recipe.kitchen.name %></dt>
-  <dt><%= @recipe.type.name %></dt>
-  <dt><%= @recipe.how_many_people_serves %></dt>
-  <dt><%= @recipe.preparation_time %></dt>
-  <dt><%= @recipe.difficulty_level %></dt>
-  <dt><%= @recipe.ingredients %></dt>
-  <dt><%= @recipe.step_by_step %></dt>
-</dl>
+<br>
 
-<%= link_to 'Voltar', root_path %>
+
+
+
+</br>
+<h3><strong><%= link_to 'Voltar', root_path %></strong></h3>
+<br>
+<div class="col-md-9 col-md-push-3">
+  <dl>
+    <dt><%= image_tag @recipe.avatar.url(:medium) %></dt>
+    <dt><h2><%= @recipe.recipe_name %></h2></dt>
+    <dt><%= @recipe.kitchen.name %></dt>
+    <dt><%= @recipe.type.name %></dt>
+    <dt><%= @recipe.how_many_people_serves %></dt>
+    <dt><%= @recipe.preparation_time %></dt>
+    <dt><%= @recipe.difficulty_level %></dt>
+    <dt><%= @recipe.ingredients %></dt>
+    <dt><%= @recipe.step_by_step %></dt>
+  </dl>
+</div>

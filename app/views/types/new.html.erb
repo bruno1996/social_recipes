@@ -1,12 +1,17 @@
 <h2>Cadastrar Tipo de Comida </h2>
 
+
+<h3><strong><%= link_to 'Voltar', root_path %></strong></h3>
+<br>
 <%= flash[:error] %>
-<dl>
+<div class="form-group">
+<dl class="form-horizontal">
 <%= simple_form_for @type do |f| %>
 
-  <dt><%= f.input :name,label: 'Tipo de Comida',error: "Campo Obrigatório" %></dt>
-
+  <dt class="form-control"><%= f.input :name,label: 'Tipo de Comida',error: "Campo Obrigatório" %></dt>
+  <br>
   <%= f.submit 'Postar Tipo de Comida' %>
+
 <% end %>
 </dl>
-<%= link_to 'Voltar', root_path %>
+</div>

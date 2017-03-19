@@ -2,35 +2,36 @@
 <h2>Cozinha Cadastrada</h2>
 <h3><%= @kitchen.name %></h3> <br>
 <%else%>
-<h2>Receitas De Cozinha <%=@kitchen.name %></h2>
+<h2>Receitas De Cozinha <%=@kitchen.name %></h2> <br>
+<h3><strong><%= link_to 'Voltar', root_path %></strong></h3>
 
-<dl>
-<% @kitchen.recipes.each do |recipe| %>
-  <h3><dt>Foto</dt></h3>
-  <dd><%= image_tag recipe.avatar.url(:medium) %></dd>
-  <h3><dt> Nome da Receita </dt></h3>
-  <h4><dd><%= recipe.recipe_name %></dd></h4>
-  <h3><dt> Cozinha </dt></h3>
-  <h4><dd><%= recipe.kitchen.name %></dd>
-  <h3><dt> Tipo de Comida </dt></h3>
-  <h4><dd><%= recipe.type.name %></dd>
-  <h3><dt> Quantas Pessoas Serve </dt></h3>
-  <h4><dd><%= recipe.how_many_people_serves %></dd>
-  <h3><dt> Tempo de Preparação </dt></h3>
-  <h4><dd><%= recipe.preparation_time %></dd>
-  <h3><dt> Nivel de Dificuldade </dt></h3>
-  <h4><dd><%= recipe.difficulty_level %></dd>
-  <h3><dt> Ingredientes </dt></h3>
-  <h4><dd><%= recipe.ingredients %></dd>
-  <h3><dt> Passo a Passo </dt></h3>
-  <h4><dd><%= recipe.step_by_step %></dd>
-<% end %>
-</dl>
+<div class="col-md-9 col-md-push-3">
+  <dl>
+    <% @kitchen.recipes.each do |recipe| %>
+      <h3><dt>Foto</dt></h3>
+      <dd><%= image_tag recipe.avatar.url(:medium) %></dd>
+      <h3><dt> Nome da Receita </dt></h3>
+      <h4><dd><%= recipe.recipe_name %></dd></h4>
+      <h3><dt> Cozinha </dt></h3>
+      <h4><dd><%= recipe.kitchen.name %></dd>
+      <h3><dt> Tipo de Comida </dt></h3>
+      <h4><dd><%= recipe.type.name %></dd>
+      <h3><dt> Quantas Pessoas Serve </dt></h3>
+      <h4><dd><%= recipe.how_many_people_serves %></dd>
+      <h3><dt> Tempo de Preparação </dt></h3>
+      <h4><dd><%= recipe.preparation_time %></dd>
+      <h3><dt> Nivel de Dificuldade </dt></h3>
+      <h4><dd><%= recipe.difficulty_level %></dd>
+      <h3><dt> Ingredientes </dt></h3>
+      <h4><dd><%= recipe.ingredients %></dd>
+      <h3><dt> Passo a Passo </dt></h3>
+      <h4><dd><%= recipe.step_by_step %></dd>
+    <% end %>
+  </dl>
+</div>
+
 <%end%>
+
 <% if @kitchen.recipes.empty? %>
   <h3>Sem Receitas Para Essa Cozinha</h3>
 <% end %>
-
-<br>
-
-<h3><strong><%= link_to 'Voltar', root_path %></strong></h3>
