@@ -3,7 +3,6 @@
 <h3><%= @kitchen.name %></h3> <br>
 <%else%>
 <h2>Receitas De Cozinha <%=@kitchen.name %></h2> <br>
-<h3><strong><%= link_to 'Voltar', root_path %></strong></h3>
 
 <div class="col-md-9 col-md-push-3">
   <dl>
@@ -29,8 +28,9 @@
     <% end %>
   </dl>
 </div>
-
 <%end%>
+
+<h3><strong><%= link_to 'Voltar', root_path %></strong></h3>
 
 <% if @kitchen.recipes.empty? %>
   <h3>Sem Receitas Para Essa Cozinha</h3>

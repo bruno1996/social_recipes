@@ -9,6 +9,14 @@
   </head>
 
   <body>
+    <h1>Social Receipts</h1>
+    <br>
+    <%= form_tag(search_path, method: :get) do %>
+      <h2><%= label_tag :term, 'Buscar Receita' %></h2>
+      <%= text_field_tag :term %>
+      <%= submit_tag 'Buscar' %>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>

@@ -10,7 +10,7 @@ require 'rails_helper'
 
       visit root_path
 
-      fill_in 'Nome da Receita',       with: recipe.recipe_name
+      fill_in 'Buscar Receita',       with: recipe.recipe_name
 
       click_on 'Buscar'
 
@@ -32,7 +32,7 @@ require 'rails_helper'
 
         visit @recipe_path
 
-        fill_in 'Nome da Receita',       with: recipe.recipe_name
+        fill_in 'Buscar Receita',       with: recipe.recipe_name
 
         click_on 'Buscar'
 
@@ -49,7 +49,7 @@ require 'rails_helper'
 
       visit root_path
 
-      fill_in 'Nome da Receita',      with: "Arroz de Forno"
+      fill_in 'Buscar Receita',      with: "Arroz de Forno"
 
       click_on 'Buscar'
 

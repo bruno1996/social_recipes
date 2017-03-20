@@ -26,4 +26,8 @@ class RecipesController < ApplicationController
       render :new
     end
   end
+  def search
+    @term = params[:term]
+    @recipes = Recipe.where(recipe_name: @term)
+  end
 end
