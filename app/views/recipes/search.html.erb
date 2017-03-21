@@ -1,4 +1,31 @@
-<h1>Resultado da busca <%= @term %> </h1>
-<% @recipes.each do |recipe| %>
-  <%= recipe %>
-<% end %>
+<h3><strong><%= link_to 'Voltar', root_path %></strong></h3>
+
+
+<div class="col-md-9 col-md-push-3">
+  <strong><h1>Resultado da busca <%= @term %> </h1></strong>
+  <dl>
+    <% @recipes.each do |recipe| %>
+      <h3><dt>Foto</dt></h3>
+      <dd><%= image_tag recipe.avatar.url(:medium) %></dd>
+      <h3><dt> Nome da Receita </dt></h3>
+      <h4><dd><%= recipe.recipe_name %></dd></h4>
+      <h3><dt> Cozinha </dt></h3>
+      <h4><dd><%= recipe.kitchen.name %></dd>
+      <h3><dt> Tipo de Comida </dt></h3>
+      <h4><dd><%= recipe.type.name %></dd>
+      <h3><dt> Quantas Pessoas Serve </dt></h3>
+      <h4><dd><%= recipe.how_many_people_serves %></dd>
+      <h3><dt> Tempo de Preparação </dt></h3>
+      <h4><dd><%= recipe.preparation_time %></dd>
+      <h3><dt> Nivel de Dificuldade </dt></h3>
+      <h4><dd><%= recipe.difficulty_level %></dd>
+      <h3><dt> Ingredientes </dt></h3>
+      <h4><dd><%= recipe.ingredients %></dd>
+      <h3><dt> Passo a Passo </dt></h3>
+      <h4><dd><%= recipe.step_by_step %></dd>
+    <% end %>
+  </dl>
+</div>
+<%if @recipes.empty? %>
+  Não a Receitas com Esse Nome <%= @term %>
+<%end%>

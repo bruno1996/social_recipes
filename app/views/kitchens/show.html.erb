@@ -1,3 +1,6 @@
+<h3><strong><%= link_to 'Voltar', root_path %></strong></h3>
+
+
 <%if @kitchen.recipes.empty?%>
 <h2>Cozinha Cadastrada</h2>
 <h3><%= @kitchen.name %></h3> <br>
@@ -30,7 +33,6 @@
 </div>
 <%end%>
 
-<h3><strong><%= link_to 'Voltar', root_path %></strong></h3>
 
 <% if @kitchen.recipes.empty? %>
   <h3>Sem Receitas Para Essa Cozinha</h3>

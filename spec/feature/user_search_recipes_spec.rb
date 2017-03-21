@@ -4,9 +4,9 @@ require 'rails_helper'
     scenario 'successfully' do
                     kitchen = create(:kitchen)
 
-                    recipe = create(:recipe)
-
                     type = create(:type)
+
+                    recipe = create(:recipe)
 
       visit root_path
 
@@ -14,7 +14,7 @@ require 'rails_helper'
 
       click_on 'Buscar'
 
-      expect(page).to have_css("h2", text: recipe.recipe_name)
+      expect(page).to have_css("h4", text: recipe.recipe_name)
       expect(page).to have_content kitchen.name
       expect(page).to have_content type.name
       expect(page).to have_content recipe.how_many_people_serves
@@ -36,7 +36,7 @@ require 'rails_helper'
 
         click_on 'Buscar'
 
-        expect(page).to have_css("h2", text: recipe.recipe_name)
+        expect(page).to have_css("h4", text: recipe.recipe_name)
         expect(page).to have_content kitchen.name
         expect(page).to have_content type.name
         expect(page).to have_content recipe.how_many_people_serves
