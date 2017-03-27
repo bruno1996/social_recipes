@@ -27,7 +27,7 @@ class RecipesController < ApplicationController
     end
   end
   def search
-    @term = params[:term]
+    @term = params[:term.downcase]
     @recipes = Recipe.where(recipe_name: @term)
   end
 end
