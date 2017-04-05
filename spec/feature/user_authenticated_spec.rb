@@ -41,4 +41,21 @@ require 'rails_helper'
 
 
     end
+    scenario 'valid field login' do
+
+      visit new_user_path
+
+      click_on 'Entrar'
+
+      expect(page).to have_content('Preencha os campos obrigatórios')
+    end
+    scenario 'fail login incorrect' do
+
+        visit root_path
+
+        click_on 'Entrar'
+
+        fill_in 'Email:',    with: 'teste@gmail.com'
+        fill_in 'Senha:',    with: '010203' 
+    end
   end
