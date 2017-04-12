@@ -9,17 +9,17 @@
         1,
         null,
         null,
-        0,
+        1,
         null,
-        0,
+        1,
         null,
-        0,
-        0,
-        0,
+        1,
+        1,
+        1,
         null,
-        0,
+        1,
         null,
-        0,
+        1,
         0,
         0,
         0,
@@ -833,8 +833,40 @@
       "/home/bruno/workspace/campus_code/recipes/social_recipes/app/helpers/application_helper.rb": [
         1,
         null
+      ],
+      "/home/bruno/workspace/campus_code/recipes/social_recipes/app/controllers/home_controller.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/home/bruno/workspace/campus_code/recipes/social_recipes/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "/home/bruno/workspace/campus_code/recipes/social_recipes/app/models/recipe.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/home/bruno/workspace/campus_code/recipes/social_recipes/app/models/kitchen.rb": [
+        1,
+        1,
+        1,
+        null
       ]
     },
-    "timestamp": 1491491252
+    "timestamp": 1492011813
   }
 }
